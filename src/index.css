@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 210 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 15%;
+
+    --primary: 210 73% 21%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 73% 43%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 20% 45%;
+
+    --accent: 45 89% 57%;
+    --accent-foreground: 210 50% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 73% 21%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 50% 15%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 50% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 50% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 73% 43%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 73% 21%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 50% 25%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 45 89% 57%;
+    --accent-foreground: 210 50% 15%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 50% 30%;
+    --input: 210 50% 30%;
+    --ring: 210 73% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-opensans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-nunito font-bold;
+  }
+}
+
+@layer components {
+  .uniwise-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6;
+  }
+
+  .uniwise-card {
+    @apply bg-card rounded-lg border shadow-sm p-6;
+  }
+
+  .uniwise-section {
+    @apply py-8;
+  }
+}
